@@ -224,6 +224,10 @@
       }
     }
 
+    index = index || 0;
+    while (index < 0) {
+      index += this.options.colorPalette.length;
+    }
     return this.options.colorPalette[index % this.options.colorPalette.length];
   };
 
